@@ -63,74 +63,82 @@
         </div>
     </section>
     <section>
-        <div class="swiper mySwiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="img/Frame 1.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/Frame 2.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/Frame 3.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/Frame 4.png" alt="">
-              </div>
-              ...
+        <div class="container">
+            <div class="container-descricao__carousel">
+                <p class="title">
+                    <strong>Escolhas</strong> da loja
+                </p>
+                <p class="description">
+                    Adorado por nossos clientes de mais de 35 cidades
+                </p>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-          </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/Frame 2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Frame 3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/Frame 1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="container container-body____bar">
+                <span class="body-bar"></span>
+            </div>
+        </div>
     </section>
     <footer>
-        <div class="container">
-            Rodapé
+        <div class="container container-rodape">
+            <div class="container-rodape__logo">
+                <img src="img/Logo.png" alt="">
+            </div>
+            <div class="container-rodape__menus">
+                <div class="menu1">
+                    <a href="">Nosso time</a>
+                    <a href="">Nossa Equipe</a>
+                    <a href="">Comestíveis</a>
+                </div>
+                <div class="menu2">
+                    <a href="">Serviços</a>
+                    <a href="">Projetos</a>
+                    <a href="">Afiliados</a>
+                </div>
+                <div class="menu3">
+                    <a href="">Termos de uso</a>
+                    <a href="">Políticas de privacidade</a>
+                    <a href="">Contato</a>
+                </div>
+            </div>
         </div>
     </footer>
 
 
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Initialize Swiper -->
+    <script>
+    //   var swiper = new Swiper(".mySwiper", {
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //   });
 
-
-
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-      
-
-        const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-
-        // If we need pagination
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
         pagination: {
-            el: '.swiper-pagination',
+          el: ".swiper-pagination",
+          clickable: true,
         },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        });
-    </script>
-
+      });
+    </script>    
     <!-- IONICS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
