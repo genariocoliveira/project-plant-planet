@@ -127,7 +127,13 @@ input[type="checkbox"] {
 }
 
 .container-body____bar {
-    margin-top: 87px;
+    margin: 87px auto 30px;
+    background-color: #1B4332;
+    width: 65%;
+    height: 3px;
+}
+.container-body____bar-carousel {
+    margin: 87px auto 30px;
     background-color: #1B4332;
     width: 65%;
     height: 3px;
@@ -149,13 +155,14 @@ input[type="checkbox"] {
 }
 
 .description {
-    font-size: 32px;
+    margin: 22px 0 0 0;
+    font-size: 22px;
     color: #767676;
 }
 
 /* CAROUSEL */
 .swiper {
-    width: 50%;
+    width: 80%;
     height: 50%;
     padding: 40px 0 !important;
 }
@@ -163,7 +170,6 @@ input[type="checkbox"] {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
 
     /* Center slide text vertically */
     display: -webkit-box;
@@ -182,16 +188,28 @@ input[type="checkbox"] {
 
 .swiper-slide img {
     display: block;
-    width: 50%;
-    height: 50%;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
 }
 
 /* ===============================RODAPE================================== */
 .container-rodape{
-    padding: 195px 0 100px;
+    padding: 70px 0 50px;
     display: flex;
     justify-content: space-around;
+}
+.container-rodape__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-rodape__itens ion-icon{
+    font-size: 25px;
+    margin: 15px 0 0 10px;
+}
+.container-rodape__itens ion-icon:hover{
+    color: #2d6a4f;
 }
 .container-rodape__menus{
     display: flex;
@@ -202,8 +220,15 @@ input[type="checkbox"] {
    color: #111;
    text-decoration: none;
    font-weight: 500;
-   font-size: 18px;
-   padding: 10px 0;
+   font-size: 14px;
+   margin: 15px 0;
+   box-shadow: inset 0 0 0 0 #2d6a4f;
+   transition: all .3s;
+}
+.menu1 a:hover, .menu2 a:hover, .menu3 a:hover{
+    box-shadow: inset 2px 0 0 0 #2d6a4f;
+    padding-left: 5px;
+    font-weight: 600;
 }
 .menu1{
     display: flex;
@@ -214,17 +239,126 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     flex: 1;
-    bac
 }
 .menu3{
     display: flex;
     flex-direction: column;
     flex: 1;
 }
+.copy{
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
 
 /* BREAKPOINTS */
+
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+    .container-body____bar{
+        margin: 60px 0 0 0 !important;
+        width: 90% !important;
+        height: 30px;
+    }
+    .container-body____bar-carousel {
+        width: 70%;
+    }
+    /* APRESENTAÇÃO DO SITE */
+    .container-body___apresentacao__left{
+        width: 100% !important;
+        height: 50vh;
+    }
+    .container-body___apresentacao__left h1 {
+        width: 80%;
+        text-align: left;
+        font-size: 30px !important;
+        font-weight: 400;
+    }
+
+    .container-body___apresentacao__left p {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 18px !important;
+        color: #767676;
+    }
+    /* ==============carousel======================== */
+    .container-descricao__carousel {
+        margin: 5px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title{
+        font-size: 28px;
+    }
+    .description{
+        font-size: 18px;
+        width: 80%;
+    }
+    /* ==========================RODAPE=================== */
+    .container-rodape{
+        padding: 30px 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .container-rodape__logo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 0 0 40px;
+    }
+    .container-rodape__itens ion-icon{
+        font-size: 25px;
+        margin: 15px 0 0 10px;
+    }
+    .container-rodape__itens ion-icon:hover{
+        color: #2d6a4f;
+    }
+    .container-rodape__menus{
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0 10px 40px;
+        width: 100%;
+        height: 100%;
+    }
+    .menu1 a, .menu2 a, .menu3 a{
+       color: #111;
+       list-style: disc !important;
+       text-decoration: none;
+       font-weight: 500;
+       font-size: 14px;
+       margin: 5px 0;
+       box-shadow: inset 0 0 0 0 #2d6a4f;
+       transition: all .3s;
+    }
+    .menu1 a:hover, .menu2 a:hover, .menu3 a:hover{
+        box-shadow: inset 2px 0 0 0 #2d6a4f;
+        padding-left: 5px;
+        font-weight: 600;
+    }
+    .menu1{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: 10px;
+    }
+    .menu2{
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+    .menu3{
+        display: flex;
+        flex-direction: column;
+    }
+    .copy{
+        text-align: center;
+        font-size: .7em;
+        margin-bottom: 15px;
+    }
+}
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -256,12 +390,13 @@ input[type="checkbox"] {
 
     nav ul {
         position: fixed;
+        border-radius: 10px;
         top: 80px;
         right: -100%;
-        background-color: #2d6a4faa;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
+        background-color: #3f926d;
+        height: 40vh;
+        width: 50%;
+        text-align: left;
         display: block;
         transition: all 0.3s ease;
     }
@@ -318,6 +453,11 @@ input[type="checkbox"] {
         width: 65%;
         height: 3px;
         order: 3;
+    }
+
+    /* ================================ CAROUSEL================ */
+    .description{
+        font-size: 18PX;
     }
 }
 
