@@ -638,12 +638,6 @@ input[type="checkbox"] {
 }
 
 /* Large devices (desktops, less than 1200px) */
-/* @media (min-width:1199.98px) {
-    .container {
-        width: 84%;
-        margin: 0 auto;
-    }
-} */
 @media (max-width: 1199.98px) {
     .container {
         width: 84%;
