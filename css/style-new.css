@@ -13,12 +13,10 @@ html {
 header {
     padding-top: 50px;
 }
-
 .container {
     width: 84%;
     margin: 0 auto;
 }
-
 .img-fluid {
     width: 100%;
 }
@@ -640,7 +638,17 @@ input[type="checkbox"] {
 }
 
 /* Large devices (desktops, less than 1200px) */
+/* @media (min-width:1199.98px) {
+    .container {
+        width: 84%;
+        margin: 0 auto;
+    }
+} */
 @media (max-width: 1199.98px) {
+    .container {
+        width: 84%;
+        margin: 0 auto;
+    }
     .container-body___apresentacao__left h1 {
         font-size: 33px;
         font-weight: 400;
